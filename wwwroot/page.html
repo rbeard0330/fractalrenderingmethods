@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Fractal render comparison</title>
+
+  </head>
+  <body>
+    <div class="Intro">
+      <h1>Fractal Rendering Test</h1>
+      <p>This page is designed to test rendering speeds of a fractal image in JS and Rust.</p>
+    </div>
+    <div class="Inputs">
+      <label for="fractal">Fractal to draw:</label>
+      <select name="fractal" id="fractal" value="-1">
+        <option value="mandelbrot" selected>Mandelbrot set</option>
+        <option value="julia">Julia set</option>
+        <option value="julia">Burning ship fractal</option>
+
+      </select>
+      <label for="x-min">Minimum X-coordinate</label>
+      <input type="number" name="x-min" id="x-min" value="-1">
+      <label for="x-max">Maximum X-coordinate</label>
+      <input type="number" name="x-max" id="x-max" value="1">
+      <label for="y-min">Minimum Y-coordinate</label>
+      <input type="number" name="y-min" id="y-min" value="-1">
+      <label for="y-max">Maximum Y-coordinate</label>
+      <input type="number" name="y-max" id="y-max" value="1" disabled>
+      <label for="scaling">Automatically scale Y coordinates?</label>
+      <input type="checkbox" name="scaling" id="scaling" checked>
+      <button id="execute">Render!</button>
+    </div>
+    <div class="picture">
+      <canvas id="canvas" width="1500" height="1500"></canvas>
+    </div>
+    <script src="main.js"></script>
+  </body>
+</html>
